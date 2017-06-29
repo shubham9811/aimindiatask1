@@ -13,18 +13,22 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="css/mystyles.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
     <script>
     //navbar is 2nd navbar and navbar1 is first 
-    if (window.innerWidth > 760) {
+
+    if (true) {
         window.addEventListener("scroll", function() {
             if (window.scrollY < 100) {
                 //remove top navbar
-                $("#hide").css("display", "none");
+                $("#hide1").css("display", "none");
                 $('#nav1').removeClass("navbar-fixed-top");
             }
             if (window.scrollY >= 100) {
-                $("#hide").css("display", "block");
-                $('.navbar').fadeOut("fast");
+                $("#hide1").css("display", "block");
+                $('.navbar').fadeOut("slow");
                 //show
                 $('#nav1').addClass("navbar-fixed-top");
             } else {
@@ -33,11 +37,25 @@
         }, false);
 
     }
+     // else {
+    //     (function() {
+    //        console.log("working");
+    //         $('#nav2').removeClass("navbar-static-bottom");
+    //         $('#nav1').addClass("navbar-fixed-top");
+    //         $("#hide1").css("display", "block");
+            
+    //         $("#hide2").css("display", "none");
+                
+    //         //show
+            
+    //     })();
+
+    // }
     </script>
 </head>
 
 <body>
-    <div id="hide" class="col-lg-12" style="display: none">
+    <div id="hide1" class="col-lg-12" style="display: none">
         <!--navbar 1-->
         <nav class=" header-nav navbar1 " role="navigation" id="nav1">
             <div class="container-fluid">
@@ -99,7 +117,8 @@
             </div>
         </div>
     </header>
-    <nav class=" header-nav navbar  navbar-static-bottom " role="navigation">
+    <div id="hide2"  style="">
+    <nav class=" header-nav navbar  navbar-static-bottom " role="navigation" id="nav2">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -137,6 +156,7 @@
             </div>
         </div>
     </nav>
+    </div>
     <section id="section2">
         <!-- <div class="container-fluid"> -->
         <div class="row row-content ">
@@ -191,6 +211,8 @@
         </div>
         <!-- </div> -->
     </section>
+    <div><p style="padding-top: 500px"></p></div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
